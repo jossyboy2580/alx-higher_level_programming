@@ -7,7 +7,7 @@ def argzz():
     args_count = len(sys.argv) - 1
     arg_message = "argument"
     arg_prefix = ":"
-    if args_count > 1:
+    if args_count > 1 or args_count == 0:
         arg_message = "arguments"
     if args_count == 0:
         arg_prefix = "."
