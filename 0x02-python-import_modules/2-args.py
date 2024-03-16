@@ -6,10 +6,11 @@ def argzz():
 
     args_count = len(sys.argv) - 1
     arg_message = "argument"
-    arg_prefix = "."
-    if args_count > 1 or args_count == 0:
+    arg_prefix = ":"
+    if args_count > 1:
         arg_message = "arguments"
-        arg_prefix = ":"
+    if args_count == 0:
+        arg_prefix = "."
     print("{} {}{}".format(args_count, arg_message, arg_prefix))
     if args_count > 0:
         for i in range(args_count):
