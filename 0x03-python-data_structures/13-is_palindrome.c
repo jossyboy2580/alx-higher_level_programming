@@ -8,6 +8,8 @@ int is_palindrome(listint_t **head)
 	listint_t *current = *head;
 	size_t values_count = 0;
 
+	if (!(*head))
+		return (0);
 	while (current)
 	{
 		values = realloc(values, sizeof(int) * ++values_count);
