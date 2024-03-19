@@ -1,9 +1,6 @@
 #!/usr/bin/python3
 def no_c(my_string):
     if my_string:
-        listy = list(my_string)
-        len_listy = len(listy)
-        for i in range(len_listy - 1):
-            if listy[i] == "c" or listy[i] == "C":
-                listy.pop(i)
-    return ("".join(listy))
+        listy = [c for c in my_string if c != "c" and c != "C"]
+        return ("".join(listy))
+    return
