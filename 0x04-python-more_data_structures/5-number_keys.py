@@ -1,4 +1,6 @@
 #!/usr/bin/python3
 def number_keys(a_dictionary):
+    dict_len = 0
     if a_dictionary:
-        return (len(list(a_dictionary.keys())))
+        dict_len = len(list(a_dictionary.keys()))
+    return (dict_len)
