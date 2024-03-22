@@ -18,5 +18,11 @@ print("{} = {}".format(roman_number, roman_to_int(roman_number)))
 roman_number = "IXX"
 print("{} = {}".format(roman_number, roman_to_int(roman_number)))
 
+roman_number = "IXXX"
+print("{} = {}".format(roman_number, roman_to_int(roman_number)))
+
+roman_number = "CMIX"
+print("{} = {}".format(roman_number, roman_to_int(roman_number)))
+
 roman_number = "DCCVII"
 print("{} = {}".format(roman_number, roman_to_int(roman_number)))

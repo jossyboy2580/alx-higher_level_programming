@@ -17,7 +17,7 @@ def roman_to_int(roman_string):
         current = roman_map[letter]
         if prev:
             if prev < current:
-                result = current - prev
+                result = result - prev + (current - prev)
             elif prev >= current:
                 result += current
         else:
