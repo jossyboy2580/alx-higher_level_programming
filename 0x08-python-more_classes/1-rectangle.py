@@ -25,6 +25,10 @@ class Rectangle:
         if height < 0:
             raise ValueError("height must be an integer")
         self.__width = width
+        self.__height = height
 
     def width(self):
         return (self.__width)
+
+    def height(self):
+        return (self.__height)
