@@ -2,6 +2,11 @@
 """
 A Module that contains the definition of a class called Rectangle
 along with various functions
+
+Some doctests
+>>> rec1 = Rectangle(35)
+>>> print(rec1.width())
+35
 """
 
 
