@@ -27,7 +27,6 @@ class Rectangle:
 
     @property
     def width(self):
-        """ A property getter function """
         return (self.__width)
 
     @width.setter
