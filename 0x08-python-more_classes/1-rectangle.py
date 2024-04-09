@@ -7,6 +7,7 @@ Some doctests
 
 """
 
+
 class Rectangle:
     """
     A class that defines a rectangle object
