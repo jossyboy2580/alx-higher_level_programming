@@ -67,7 +67,7 @@ class Rectangle:
         string_list = []
         for i in range(self.__height):
             for j in range(self.__width):
-                string_list.append(Ractangle.print_symbol)
+                string_list.append(Rectangle.print_symbol)
             string_list.append("\n")
         return ("".join(string_list).strip("\n"))
 
