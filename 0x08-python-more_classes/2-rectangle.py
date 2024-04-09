@@ -7,6 +7,7 @@ Some doctests
 
 """
 
+
 class Rectangle:
     """
     A class that defines a rectangle object
@@ -49,7 +50,7 @@ class Rectangle:
         if value < 0:
             raise ValueError("height must be an integer")
         self.__height = value
-    
+
     def area(self):
         return (self.__width * self.__height)
 
