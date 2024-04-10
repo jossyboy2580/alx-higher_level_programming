@@ -1,3 +1,3 @@
 def copy_list(l):
-    new = l[:]
-    return (new)
+    if l:
+        return ([x for x in l])
