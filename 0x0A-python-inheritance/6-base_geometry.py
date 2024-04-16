@@ -9,6 +9,6 @@ class BaseGeometry(object):
     """
     A base class for a geometric object
     """
-    
+
     def area(self):
         raise Exception("area() is not implemented")
