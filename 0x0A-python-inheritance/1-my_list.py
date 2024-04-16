@@ -5,7 +5,7 @@ from list
 """
 
 
-class MyList(list):
+class MyList(List):
     """
     A class subclassed from the list object
     """
