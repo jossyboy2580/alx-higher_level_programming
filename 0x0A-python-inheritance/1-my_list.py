@@ -10,6 +10,6 @@ class MyList(List):
     A class subclassed from the list object
     """
 
-    def print_sorted(def):
+    def print_sorted(self):
         """ A method to print tbe sorted list """
-        print(sorted(self))
+        print(self.sort())
