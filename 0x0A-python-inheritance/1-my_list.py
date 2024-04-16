@@ -5,11 +5,11 @@ from list
 """
 
 
-class MyList(List):
+class MyList(list):
     """
     A class subclassed from the list object
     """
 
     def print_sorted(self):
         """ A method to print tbe sorted list """
-        print(self.sort())
+        print(sorted(self))
