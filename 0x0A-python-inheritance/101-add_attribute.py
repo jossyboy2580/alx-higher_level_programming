@@ -14,4 +14,4 @@ def add_attribute(my_obj, name, value):
         raise TypeError("can't add new attribute")
     else:
         if name:
-            my_obj.name = value
+            my_obj.__dict__[name] = value
