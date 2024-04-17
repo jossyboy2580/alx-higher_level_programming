@@ -24,7 +24,7 @@ class Student:
         if attrs and type(attrs) is list:
             varsed = dict()
             for item in attrs:
-                varsed.item = self.__dict__.item
+                varsed[item] = self.__dict__[item]
             return (varsed)
         else:
             return (vars(self))
