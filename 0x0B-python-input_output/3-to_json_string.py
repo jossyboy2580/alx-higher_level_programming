@@ -9,5 +9,4 @@ def to_json_string(my_obj):
     """ This function prints the json form of a
     python object
     """
-    if my_obj:
-        return (json.dumps(my_obj))
+    return (json.dumps(my_obj))
