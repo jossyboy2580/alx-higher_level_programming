@@ -13,5 +13,5 @@ def add_attribute(my_obj, name, value):
     if not hasattr(my_obj, '__dict__'):
         raise TypeError("can't add new attribute")
     else:
-        if name and value:
+        if name:
             my_obj.name = value
