@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-import json
 """
 A json serializer for python objects
 """
+import json
 
 
 def to_json_string(my_obj):
