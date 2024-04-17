@@ -1,25 +1,27 @@
 #!/usr/bin/python3
 """
-Geometric objec representation in
+Rectangle object representation in
 classes defined below
 """
+BaseGeometry = __import__("7-base_geometry").BaseGeometry
 
 
-class BaseGeometry(object):
+class Rectangle(BaseGeometry):
     """
-    A base class for a geometric object
+    A rectangle object that inherits basegeometry
     """
 
     def __init__(self, width, height):
-        self.__width = width
-        self.__height = height
-
-    def area(self):
-        raise Exception("area() is not implemented")
-
-    def integer_validator(self, name, value):
-        if name:
-            if type(value) is not int:
-                raise TypeError("{} must be an integer".format(name))
-            if value < 1:
-                raise ValueError("{} must be greater than 0".format(name))
+        """ class obj initializer """
+        try:
+            self.integer_validator("width", width)
+        except Exception:
+            raise
+        else:
+            self.__width = width
+        try:
+            self.integer_validator("height", height)
+        except Exception:
+            raise
+        else:
+            self.__height = height
