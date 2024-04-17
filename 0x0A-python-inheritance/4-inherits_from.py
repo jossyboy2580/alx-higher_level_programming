@@ -10,4 +10,4 @@ def inherits_from(obj, a_class):
     Function to chexk if an obj is a
     subclass of a_class
     """
-    return (issubclass(type(obj), a_class) and isinstance(obj, a_class))
+    return (issubclass(type(obj), a_class) and not isinstance(obj, a_class))
