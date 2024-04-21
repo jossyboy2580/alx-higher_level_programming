@@ -27,7 +27,6 @@ class Rectangle:
 
     @property
     def width(self):
-        """ A property getter function """
         return (self.__width)
 
     @width.setter
@@ -58,4 +57,4 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             return (0)
         else:
-            return ((2 * self._width) + (2 * self.__height))
+            return ((2 * self.__width) + (2 * self.__height))
