@@ -13,7 +13,7 @@ class Base:
 
     def __init__(self, id=None):
         """ Class object initializer """
-        if id != None:
+        if id is not None:
             self.id = id
         else:
             Base.__no_objects += 1

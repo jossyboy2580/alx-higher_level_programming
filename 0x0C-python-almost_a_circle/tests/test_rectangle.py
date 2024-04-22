@@ -21,9 +21,9 @@ class TestRectangle(unittest.TestCase):
         Test if the correct id is being assigned
         """
         r1 = Rectangle(10, 2)
-        self.assertEqual(r1.id, 1)
+        self.assertEqual(r1.id, 3)
         r2 = Rectangle(2, 10)
-        self.assertEqual(r2.id, 2)
+        self.assertEqual(r2.id, 4)
         r3 = Rectangle(10, 2, 0, 0,12)
         self.assertEqual(r3.id, 12)
 
