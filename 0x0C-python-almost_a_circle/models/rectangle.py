@@ -15,13 +15,19 @@ class Rectangle(Base):
         """ Initializer for our class """
 
         super().__init__(id)
+
+        # Attribute instantiation for width
+
         if type(width) is int:
-            if height > 0:
-                self.__width = height
+            if width > 0:
+                self.__width = width
             else:
                 raise ValueError("width must be > 0")
         else:
             raise TypeError("width must be an integer")
+
+        # Attribute instantiation for height
+
         if type(height) is int:
             if height > 0:
                 self.__height = height
@@ -147,7 +153,7 @@ class Rectangle(Base):
                 print()
                 continue
             for j in range(total_width):
-                if j <= self.__x:
+                if j < self.__x:
                     print(" ", end="")
                 else:
                     print("#", end="")
@@ -162,3 +168,36 @@ class Rectangle(Base):
         coordinates = " {}/{}".format(self.__x, self.__y)
         dimensions = " {}/{}".format(self.__width, self.__height)
         return ("[Rectangle]" + identity + coordinates + " -" + dimensions)
+
+    def update(self, *args, **kwargs):
+
+        """ A method that uses variable arguments to update
+        our rectangle """
+
+        if len(args) > 0:
+            for i in range(len(args)):
+                if i == 0:
+                    self.id = args[i]
+                elif i == 1:
+                    self.width = args[i]
+                elif i == 2:
+                    self.height = args[i]
+                elif i == 3:
+                    self.x = args[i]
+                elif i == 4:
+                    self.y = args[i]
+        elif len(kwargs) > 0:
+            for key, value in kwargs.items():
+                if key == "id":
+                    self.id = value
+                if key == "width":
+                    self.width = value
+                if key == "height":
+                    self.height = value
+                if key == "x":
+                    self.x = value
+                if key == "y":
+                    self.y = value
+
+    def to_dictionary(self):
+        return ({'id': self.id, 'width': self.width, 'height': self.height, 'x':self.x, 'y': self.y})
