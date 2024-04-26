@@ -32,4 +32,7 @@ class Base:
             return (json.dumps(list_dictionaries))
 
     def save_to_file(cls, list_objs):
+        """
+        Saving to file
+        """
         pass
