@@ -31,16 +31,15 @@ class Square(Rectangle):
         return ("[Square]" + identity + coordinates + " -" + size)
 
     @property
-        def size(self):
+    def size(self):
 
-            """ Property getter for our class """
-
+        """ Property getter for our class """
         return (self.__width)
 
     @size.setter
-        def size(self, value):
+    def size(self, value):
 
-            """ Property setter for our class """
+        """ Property setter for our class """
 
         if type(value) is int:
             if value > 0:
@@ -78,7 +77,7 @@ class Square(Rectangle):
 
     def to_dictionary(self):
         """
-        This method returns the dictionary 
+        This method returns the dictionary
         representation of a square
         """
         square_dict = dict()
