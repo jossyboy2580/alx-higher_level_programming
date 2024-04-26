@@ -205,9 +205,9 @@ class Rectangle(Base):
         representation of our class
         """
         rect_dict = dict()
-        rect_dict.id = self.id
-        rect_dict.width = self.width
-        rect_dict.height = self.height
-        rect_dict.x = self.x
-        rect_dict.y = self.y
+        rect_dict['id'] = self.id
+        rect_dict['width'] = self.width
+        rect_dict['height'] = self.height
+        rect_dict['x'] = self.x
+        rect_dict['y'] = self.y
         return (rect_dict)

@@ -25,7 +25,7 @@ class Base:
         """
         to json string
         """
-        if not list_dictionaries or not isinstance(list_dictionaries, list):
+        if not isinstance(list_dictionaries, list):
             return "[]"
         else:
             return json.dumps(list_dictionaries)
