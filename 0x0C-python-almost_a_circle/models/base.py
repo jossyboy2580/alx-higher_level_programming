@@ -81,5 +81,5 @@ class Base:
             list_objs_read = "[]"
         finally:
             list_objs = from_json_string(list_objs_read)
-            objs_array = cls.create(list_objs)
+            objs_array = cls.__name__.create(list_objs)
             return objs_array
