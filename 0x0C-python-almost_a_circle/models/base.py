@@ -80,6 +80,8 @@ class Base:
         except FileNotFoundError:
             list_objs_read = "[]"
         finally:
-            list_objs = from_json_string(list_objs_read)
-            objs_array = cls.__name__.create(list_objs)
-            return objs_array
+            list_objs = Base.from_json_string(list_objs_read)
+            obj_array = []
+            for item in list_objs:
+                obj_array.append(cls.create(**item))
+            return obj_array
