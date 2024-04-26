@@ -43,3 +43,14 @@ class Base:
         with open(filename, 'w', encoding="utf-8") as fp:
             fp.write(cls.to_json_string(list_to_save))
             fp.close()
+
+    @staticmethod
+    def from_json_string(json_string):
+        """
+        This static method takes a supposedly
+        json string and returns a list of dictionary
+        from it
+        """
+        if json_string is None or len(json_string) == 0:
+            return []
+        return json.loads(json_string)
