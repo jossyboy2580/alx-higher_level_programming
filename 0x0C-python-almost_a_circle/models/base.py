@@ -20,19 +20,69 @@ class Base:
             Base.__no_objects += 1
             self.id = Base.__no_objects
 
+    @staticmethod
     def to_json_string(list_dictionaries):
         """
-        to_json_string is a method that returns the json
-        string representation
-        of list_dictionaries
+        to json string
         """
-        if not list_dictionaries of len(list_dictionaries) < 1:
-            return ("[]")
+        if not isinstance(list_dictionaries, list):
+            return "[]"
         else:
-            return (json.dumps(list_dictionaries))
+            return json.dumps(list_dictionaries)
 
+    @classmethod
     def save_to_file(cls, list_objs):
         """
-        Saving to file
+        Save the json representation yo a file
         """
-        pass
+        list_to_save = []
+        if list_objs is not None:
+            for obj in list_objs:
+                list_to_save.append(obj.to_dictionary())
+        filename = cls.__name__ + ".json"
+        with open(filename, 'w', encoding="utf-8") as fp:
+            fp.write(cls.to_json_string(list_to_save))
+            fp.close()
+
+    @staticmethod
+    def from_json_string(json_string):
+        """
+        This static method takes a supposedly
+        json string and returns a list of dictionary
+        from it
+        """
+        if json_string is None or len(json_string) == 0:
+            return []
+        return json.loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        """
+        Create an object from this dictionary
+        """
+        if cls.__name__ == 'Square':
+            dummy = cls(4)
+        elif cls.__name__ == 'Rectangle':
+            dummy = cls(4, 4)
+        dummy.update(**dictionary)
+        return dummy
+
+    @classmethod
+    def load_from_file(cls):
+        """
+        This class method returns a list of
+        instances from a file
+        """
+        filename = cls.__name__ + ".json"
+        try:
+            with open(filename, encoding="utf-8") as fp:
+                list_objs_read = fp.read()
+        except FileNotFoundError:
+            list_objs_read = "[]"
+        finally:
+            list_objs = Base.from_json_string(list_objs_read)
+            obj_array = []
+            for item in list_objs:
+                obj_array.append(cls.create(**item))
+            return obj_array
+>>>>>>> edb4f86fcd44eb3c124a1d4639541223e62aa50e
