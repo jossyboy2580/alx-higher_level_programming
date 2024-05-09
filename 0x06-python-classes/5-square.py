@@ -26,7 +26,7 @@ class Square:
         A property getter for the attribute size
         """
         return (self.__size)
-    
+
     @size.setter
     def size(self, value):
         """
