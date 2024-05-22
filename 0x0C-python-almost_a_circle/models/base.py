@@ -85,3 +85,4 @@ class Base:
             for item in list_objs:
                 obj_array.append(cls.create(**item))
             return obj_array
+>>>>>>> edb4f86fcd44eb3c124a1d4639541223e62aa50e
