@@ -21,7 +21,10 @@ def show_first_state(username, password, db):
 
     sess = Session()
     obj = sess.query(State).order_by(State.id).first()
-    print(f'{obj.id}: {obj.name}')
+    if obj:
+        print(f'{obj.id}: {obj.name}')
+    else:
+        print('Nothing')
 
 
 if __name__ == '__main__':
