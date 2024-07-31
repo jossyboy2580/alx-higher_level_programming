@@ -35,4 +35,4 @@ class Student:
         """
         if json:
             for (key, val) in json.items():
-                self.key = val
+                self.__setattr__(key, val)

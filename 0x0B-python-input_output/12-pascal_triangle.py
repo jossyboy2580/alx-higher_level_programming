@@ -9,7 +9,13 @@ def pascal_triangle(n):
     """
     A function that returns a pascal trangle
     """
-    pascal = list()
-    if n:
-        for i in range(1, n):
-            pascal.append([j for j in range(1, i)])
+    triangle = []
+    for i in range(n):
+        entry = []
+        for j in range(i+1):
+            if j == 0 or j == i:
+                entry.append(1)
+            else:
+                entry.append(triangle[i - 1][j - 1] + triangle[i - 1][j])
+        triangle.append(entry)
+    return triangle

@@ -21,10 +21,14 @@ class Student:
         """
         Convert an object to a serializable form
         """
+        student_dict = dict()
+
         if attrs and type(attrs) is list:
-            varsed = dict()
-            for item in attrs:
-                varsed[item] = self.__dict__[item]
-            return (varsed)
+            for key in attrs:
+                try:
+                    student_dict[key] = self.__dict__[key]
+                except KeyError:
+                    pass
         else:
-            return (vars(self))
+            student_dict = vars(self)
+        return student_dict
